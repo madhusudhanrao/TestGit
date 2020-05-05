@@ -12,6 +12,8 @@ public class TestBO implements java.io.Serializable {
 
 	private java.lang.String lastName;
 
+	private java.lang.String address;
+
 	public TestBO() {
 	}
 
@@ -31,9 +33,19 @@ public class TestBO implements java.io.Serializable {
 		this.lastName = lastName;
 	}
 
-	public TestBO(java.lang.String name, java.lang.String lastName) {
+	public java.lang.String getAddress() {
+		return this.address;
+	}
+
+	public void setAddress(java.lang.String address) {
+		this.address = address;
+	}
+
+	public TestBO(java.lang.String name, java.lang.String lastName,
+			java.lang.String address) {
 		this.name = name;
 		this.lastName = lastName;
+		this.address = address;
 	}
 
 }
