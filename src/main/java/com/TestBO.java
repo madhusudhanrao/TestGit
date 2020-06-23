@@ -12,6 +12,9 @@ public class TestBO implements java.io.Serializable {
 
 	private java.lang.String address;
 
+	@org.kie.api.definition.type.Label(value = "street")
+	private java.lang.String street;
+
 	public TestBO() {
 	}
 
@@ -31,9 +34,19 @@ public class TestBO implements java.io.Serializable {
 		this.address = address;
 	}
 
-	public TestBO(java.lang.String name, java.lang.String address) {
+	public java.lang.String getStreet() {
+		return this.street;
+	}
+
+	public void setStreet(java.lang.String street) {
+		this.street = street;
+	}
+
+	public TestBO(java.lang.String name, java.lang.String address,
+			java.lang.String street) {
 		this.name = name;
 		this.address = address;
+		this.street = street;
 	}
 
 }
