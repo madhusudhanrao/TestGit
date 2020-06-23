@@ -12,8 +12,11 @@ public class TestBO implements java.io.Serializable {
 
 	private java.lang.String address;
 
-	@org.kie.api.definition.type.Label(value = "street")
+	@org.kie.api.definition.type.Label("street")
 	private java.lang.String street;
+
+	@org.kie.api.definition.type.Label(value = "Postcode")
+	private java.lang.String postcode;
 
 	public TestBO() {
 	}
@@ -42,11 +45,20 @@ public class TestBO implements java.io.Serializable {
 		this.street = street;
 	}
 
+	public java.lang.String getPostcode() {
+		return this.postcode;
+	}
+
+	public void setPostcode(java.lang.String postcode) {
+		this.postcode = postcode;
+	}
+
 	public TestBO(java.lang.String name, java.lang.String address,
-			java.lang.String street) {
+			java.lang.String street, java.lang.String postcode) {
 		this.name = name;
 		this.address = address;
 		this.street = street;
+		this.postcode = postcode;
 	}
 
 }
